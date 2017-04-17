@@ -26,7 +26,8 @@ def checkdist():
     
     if ((t2-t1)*340*100/2) > maximum_dis:
         GPIO.output(Led_Pin, 1)
-        
+    if ((t2-t1)*340*100/2) < maximum_dis:     
+        GPIO.output(Led_Pin, 0)
     return (t2-t1)*340*100/2
 
 try:
