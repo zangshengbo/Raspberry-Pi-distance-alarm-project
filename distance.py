@@ -31,7 +31,7 @@ try:
         if(distance > maximum_dis)
            {
                print 'warning'
-               GPIO.output(Led_Pin, GPIO.HIGH)
+               GPIO.output(Led_Pin, 1)
            }
         else
            print 'Distance:%0.2f cm' % distance
