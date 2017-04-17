@@ -15,9 +15,9 @@ time.sleep(2)
 
 try:
     while True:
-    GPIO.output(Trig_Pin, GPIO.HIGH)
+    GPIO.output(Trig_Pin, 1)
     time.sleep(0.00015)
-    GPIO.output(Trig_Pin, GPIO.LOW)
+    GPIO.output(Trig_Pin, 0)
     while not GPIO.input(Echo_Pin):
         pass
     t1 = time.time()
