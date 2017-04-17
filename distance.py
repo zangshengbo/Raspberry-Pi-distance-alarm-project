@@ -14,9 +14,9 @@ GPIO.setup(Echo_Pin, GPIO.IN)
 time.sleep(2)
 
 def checkdist():
-    GPIO.output(Trig_Pin, 1)
+    GPIO.output(Trig_Pin, GPIO.HIGH)
     time.sleep(0.00015)
-    GPIO.output(Trig_Pin, 0)
+    GPIO.output(Trig_Pin, GPIO.LOW)
     while not GPIO.input(Echo_Pin):
         pass
     t1 = time.time()
@@ -26,11 +26,12 @@ def checkdist():
     
     if ((t2-t1)*340*100/2) > maximum_dis:
         GPIO.output(Led_Pin, 1)
+        
     return (t2-t1)*340*100/2
 
 try:
     while True:
            print 'Distance:%0.2f cm' % checkdist()
-        time.sleep(1)
+        time.sleep(3)
 except KeyboardInterrupt:
     GPIO.cleanup()
