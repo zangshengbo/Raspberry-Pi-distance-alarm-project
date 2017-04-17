@@ -30,10 +30,6 @@ def checkdist():
 
 try:
     while True:
-        d = checkdist()
-        if d > maximum_dis:          
-               print 'warning'                       
-        else
            print 'Distance:%0.2f cm' % checkdist()
         time.sleep(1)
 except KeyboardInterrupt:
