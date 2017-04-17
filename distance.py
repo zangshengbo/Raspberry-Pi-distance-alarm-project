@@ -31,7 +31,7 @@ def checkdist():
 
 try:
     while True:
-           print 'Distance:%0.2f cm' % checkdist()
+        print 'Distance:%0.2f cm' % checkdist()
         time.sleep(3)
 except KeyboardInterrupt:
     GPIO.cleanup()
