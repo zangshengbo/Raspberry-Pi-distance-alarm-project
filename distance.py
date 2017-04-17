@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
-Trig_Pin = 18
-Echo_Pin = 16
+Trig_Pin = 20
+Echo_Pin = 21
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(Trig_Pin, GPIO.OUT, initial = GPIO.LOW)
