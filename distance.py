@@ -23,14 +23,16 @@ def checkdist():
     while GPIO.input(Echo_Pin):
         pass
     t2 = time.time()
+    
+    if ((t2-t1)*340*100/2) > maximum_dis:
+        GPIO.output(Led_Pin, 1)
     return (t2-t1)*340*100/2
 
 try:
     while True:
         d = checkdist()
         if d > maximum_dis:          
-               print 'warning'
-                GPIO.output(Led_Pin, 1)       
+               print 'warning'                       
         else
            print 'Distance:%0.2f cm' % checkdist()
         time.sleep(1)
