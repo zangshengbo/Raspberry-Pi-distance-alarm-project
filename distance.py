@@ -28,11 +28,9 @@ def checkdist():
 try:
     while True:
         d = checkdist()
-        if( d > maximum_dis)
-           {
+        if d > maximum_dis:          
                print 'warning'
-               GPIO.output(Led_Pin, 1)
-           }
+                GPIO.output(Led_Pin, 1)       
         else
            print 'Distance:%0.2f cm' % checkdist()
         time.sleep(1)
